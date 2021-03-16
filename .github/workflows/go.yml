@@ -18,6 +18,5 @@ jobs:
       with:
         go-version: 1.16
         
-    - name: Build
-      run: cd fcommit
-      run: go build -v .
+    - name: Build 
+      run: cd fcommit && go build -v .
