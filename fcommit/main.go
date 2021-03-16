@@ -19,7 +19,7 @@ func main() {
 	c = exec.Command("bash", "-c", fmt.Sprintf("git commit -m '%s'", commitMsg))
 	log.Println("committing...")
 	if out, err := c.Output(); err == nil {
-		log.Print(string(out))
+		log.Println(string(out))
 	} else {
 		log.Fatal(err)
 	}
