@@ -18,7 +18,7 @@ func main() {
 		log.Println(err)
 	}
 	log.Print(string(out))
-	c = exec.Command("git", "push", "origin", "master")
+	c = exec.Command("git", "push", "origin master")
 	out, err = c.Output()
 	if err != nil {
 		log.Println(err)
