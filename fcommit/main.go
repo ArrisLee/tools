@@ -13,6 +13,9 @@ func main() {
 	args := flag.Args()
 	commitMessage := strings.Join(flag.Args()[:len(args)-1], " ")
 	branch := args[len(args)-1]
+	if branch == "" {
+		branch = "master"
+	}
 	c := exec.Command("bash", "-c", "git add --all")
 	log.Println("adding...")
 	c.Run()
